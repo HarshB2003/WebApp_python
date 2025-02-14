@@ -1,40 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyScript Example</title>
-    <!-- PyScript CSS -->
-    <link rel="stylesheet" href="https://pyscript.net/releases/2025.2.2/core.css">
-    <!-- PyScript JS -->
-    <script type="module" src="https://pyscript.net/releases/2025.2.2/core.js"></script>
+
+    <title> Learn DOM for PyScript </title>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
+
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
 </head>
+
 <body>
-    <p>Input Text</p>
 
-    <textarea name="input_text" id="input_text" placeholder="Enter your text...."></textarea>
+<h1>Learn DOM Manipulation using PyScript</h1>
 
-    <br>
+<h2>Simple String Counter using Python 🐍</h2>
 
-    <button id="run" type="button" class="button is-primary" pys-onClick="Count">Count</button>
-    <button id="clear" type="button" class="button is-danger" pys-onClick="Clear">Clear</button>
+<br>
 
-    <p>Output from 🐍</p>
+<p>Input Text</p>
 
-    <p id = 'output'></p>
-    <py-script>
-        from pyscript import Element
+<textarea name="input_text" id="input_text" placeholder="Enter your text...."></textarea>
 
-        input_text = Element("input_text")  # Access the textarea element using PyScript
-        output = Element("output")  # Access the output paragraph using PyScript
-        
-        def Clear(*args, **kwargs):
-            input_text.element.value = ""  # Clear the input text area
+<br>
 
-        def Count(*args, **kwargs):
-            number = len(input_text.element.value)  # Count the characters in the input
-            output.element.textContent = f"Character count: {number}"  # Display the result in the output paragraph
-    </py-script>
+<button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
+<button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
 
+<p>Output from 🐍</p>
+
+<p id = 'output'></p>
+    
 </body>
+
+<py-script>
+
+input_text = Element("input_text")    
+
+op = Element("output")
+
+def clear(*args, **kwargs):
+    input_text.clear()
+
+def count(*args, **kwargs):
+    number = len(input_text.value)
+    op.write(number)
+
+
+</py-script>
+
+
 </html>
