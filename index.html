@@ -23,16 +23,15 @@
 
     <p id = 'output'></p>
     <script type="py">
-        from pyscript import Element
-        input = Element("input_text")
-        op = Element("output")
-
+        input_text = document.getElementById("input_text")  # Access the textarea element
+        output = document.getElementById("output")  # Access the output paragraph
+        
         def Clear(*args, **kwargs):
-            input.clear()
+            input_text.value = ""  # Clear the input text area
 
         def Count(*args, **kwargs):
-            number = len(input.value)
-            op.write(number)
+            number = len(input_text.value)  # Count the characters in the input
+            output.textContent = f"Character count: {number}"  # Display the result in the output paragraph
     </script>
 </body>
 </html>
