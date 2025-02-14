@@ -26,8 +26,8 @@
 
 <br>
 
-<button id="run" type="submit" class="button is-primary" pys-onClick="count">Count</button>
-<button id="clear" type="reset" class="button is-danger" pys-onClick="clear">Clear</button>
+<button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
+<button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
 
 <p>Output from 🐍</p>
 
@@ -35,7 +35,7 @@
     
 </body>
 
-<script type="py">
+<py-script>
 
 input_text = Element("input_text")    
 
@@ -49,7 +49,7 @@ def count(*args, **kwargs):
     op.write(number)
 
 
-</script>
+</py-script>
 
 
 </html>
