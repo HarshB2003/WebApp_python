@@ -10,10 +10,27 @@
     <script type="module" src="https://pyscript.net/releases/2025.2.2/core.js"></script>
 </head>
 <body>
-    <div id="output"></div>
+    <p>Input Text</p>
+
+    <textarea name="input_text" id="input_text" placeholder="Enter your text...."></textarea>
+
+    <br>
+
+    <button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
+    <button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
+
+    <p>Output from 🐍</p>
+
+    <p id = 'output'></p>
     <script type="py">
-        from pyscript import display
-        display("Hello,World",target="output")
+        input = Element("input_text")
+        op = Element("output")
+        def Clear(*args, *kwargs):
+            input.clear()
+
+        def Count(*args, *kwargs):
+            number = len(input.value)
+            op.write(number)
     </script>
 </body>
 </html>
