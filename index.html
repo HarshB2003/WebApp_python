@@ -16,19 +16,21 @@
 
     <br>
 
-    <button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
-    <button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
+    <button id="run" type="button" class="button is-primary" pys-onClick="Count">Count</button>
+    <button id="clear" type="button" class="button is-danger" pys-onClick="Clear">Clear</button>
 
     <p>Output from 🐍</p>
 
     <p id = 'output'></p>
     <script type="py">
+        from pyscript import Element
         input = Element("input_text")
         op = Element("output")
-        def Clear(*args, *kwargs):
+
+        def Clear(*args, **kwargs):
             input.clear()
 
-        def Count(*args, *kwargs):
+        def Count(*args, **kwargs):
             number = len(input.value)
             op.write(number)
     </script>
