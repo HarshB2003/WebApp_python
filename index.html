@@ -10,8 +10,10 @@
     <script type="module" src="https://pyscript.net/releases/2025.2.2/core.js"></script>
 </head>
 <body>
+    <div id="output"></div>
     <py-script>
-        print("Hello,World")
+        from pyscript import display
+        display("Hello,everyone",target="output")
     </py-script>
 </body>
 </html>
