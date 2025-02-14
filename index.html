@@ -22,16 +22,19 @@
     <p>Output from 🐍</p>
 
     <p id = 'output'></p>
-    <script type="py">
-        input_text = document.getElementById("input_text")  # Access the textarea element
-        output = document.getElementById("output")  # Access the output paragraph
+    <py-script>
+        from pyscript import Element
+
+        input_text = Element("input_text")  # Access the textarea element using PyScript
+        output = Element("output")  # Access the output paragraph using PyScript
         
         def Clear(*args, **kwargs):
-            input_text.value = ""  # Clear the input text area
+            input_text.element.value = ""  # Clear the input text area
 
         def Count(*args, **kwargs):
-            number = len(input_text.value)  # Count the characters in the input
-            output.textContent = f"Character count: {number}"  # Display the result in the output paragraph
-    </script>
+            number = len(input_text.element.value)  # Count the characters in the input
+            output.element.textContent = f"Character count: {number}"  # Display the result in the output paragraph
+    </py-script>
+
 </body>
 </html>
