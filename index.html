@@ -4,7 +4,8 @@
 
     <title> Learn DOM for PyScript </title>
 
-    <link rel='stylesheet' type='text/css' media='screen' href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
+    <link rel='stylesheet' type='text/css' media='screen'
+        href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
 
     <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
 
@@ -14,37 +15,39 @@
 
 <body>
 
-<h1>Learn DOM Manipulation using PyScript</h1>
+    <h1>Learn DOM Manipulation using PyScript</h1>
 
-<h2>Simple String Counter using Python 🐍</h2>
+    <h2>Simple String Counter using Python 🐍</h2>
 
-<br>
+    <br>
 
-<p>Input Text</p>
+    <p>Input Text</p>
+    <form action="#">
 
-<textarea name="input_text" id="input_text" placeholder="Enter your text...."></textarea>
+        <textarea name="input_text" id="input_text" placeholder="Enter your text...."></textarea>
 
-<br>
+        <br>
 
-<button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
-<button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
+        <button id="run" type="button" class="button is-primary" pys-onClick="count">Count</button>
+        <button id="clear" type="button" class="button is-danger" pys-onClick="clear">Clear</button>
+    </form>
 
-<p>Output from 🐍</p>
+    <p>Output from 🐍</p>
 
-<p id = 'output'></p>
-    
+    <p id='output'></p>
+
 </body>
 
 <py-script>
 
-input_text = Element("input_text")    
+    input_text = Element("input_text")
 
-op = Element("output")
+    op = Element("output")
 
-def clear(*args, **kwargs):
+    def clear(*args, **kwargs):
     input_text.clear()
 
-def count(*args, **kwargs):
+    def count(*args, **kwargs):
     number = len(input_text.value)
     op.write(number)
 
