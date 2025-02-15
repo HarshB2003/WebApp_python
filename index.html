@@ -15,7 +15,9 @@ HTML Forms with PyScript
 
 <body>
   <py-script>
-    print("Hello,everyone")
+    from pysript import display
+    from datetime import datetimenow = datetime.now()
+    display(f"Hello time is {now.strftime("%m/%d/%Y")}")
   </py-script>
 </body>
 </html> 
