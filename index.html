@@ -1,23 +1,17 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-
-<title>
-
-HTML Forms with PyScript     
-    
-</title>
-
-<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-
+    <title>HTML Forms with PyScript</title>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </head>
-
 <body>
-  <py-script>
-    from pysript import display
-    from datetime import datetimenow = datetime.now()
-    display(f"Hello time is {now.strftime("%m/%d/%Y")}")
-  </py-script>
+    <py-script>
+        from pyscript import display
+        from datetime import datetime
+
+        now = datetime.datetime.now()  # Correct way to get current datetime
+        display(f"Hello time is {now.strftime('%m/%d/%Y')}")
+    </py-script>
 </body>
-</html> 
+</html>
