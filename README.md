@@ -1,2 +1,2 @@
-# pyscript-demos
-Trying to learn python and running some demos
+# developing web applications with python
+Trying to learn web development with python and running some demos
